@@ -26,6 +26,7 @@ namespace WebApplication
         {
             services.AddControllersWithViews();
             services.Add(new ServiceDescriptor(typeof(ProjectContext), new ProjectContext(Configuration.GetConnectionString("DefaultConnection"))));
+            services.Add(new ServiceDescriptor(typeof(TestCaseContext), new TestCaseContext(Configuration.GetConnectionString("DefaultConnection"))));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
