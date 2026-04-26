@@ -1,0 +1,29 @@
+@model IEnumerable<WebApplication.Models.TestCase>
+
+@{
+    ViewData["Title"] = "Test Cases";
+}
+
+<h1>Test Cases</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.id)</th>
+            <th>@Html.DisplayNameFor(m => m.name)</th>
+            <th>@Html.DisplayNameFor(m => m.description)</th>
+            <th>@Html.DisplayNameFor(m => m.project_id)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => item.id)</td>
+                <td>@Html.DisplayFor(m => item.name)</td>
+                <td>@Html.DisplayFor(m => item.description)</td>
+                <td>@Html.DisplayFor(m => item.project_id)</td>
+            </tr>
+        }
+    </tbody>
+</table>
